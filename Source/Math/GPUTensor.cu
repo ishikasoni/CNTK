@@ -1205,10 +1205,6 @@ void TensorOpN(ElemType beta, array<ElemType*, N> pointers, ElemType alpha, Elem
     size_t dims = regularOpDims.size();
     switch (dims)
     {
-    case 10:
-        return TensorOpWithRegularLoop<ElemType, N, 10>(beta, pointers, alpha, op, reductionOp, regularOpDims, regularStrides, reducingOpDims, reducingStrides);
-    case 9:
-        return TensorOpWithRegularLoop<ElemType, N, 9>(beta, pointers, alpha, op, reductionOp, regularOpDims, regularStrides, reducingOpDims, reducingStrides);
     case 8:
         return TensorOpWithRegularLoop<ElemType, N, 8>(beta, pointers, alpha, op, reductionOp, regularOpDims, regularStrides, reducingOpDims, reducingStrides);
     case 7:
