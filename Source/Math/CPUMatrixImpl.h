@@ -7086,8 +7086,6 @@ static void TensorOpWithFnAndReduction(ElemType beta, array<ElemType*, N> pointe
     size_t dims = regularOpDims.size();
     switch (dims)
     {
-    case 12:
-        return TensorOpWithRegularLoop<ElemType, OPFN, ReductionOp, N, 11>(beta, pointers, alpha, opfn, reductionOp, regularOpDims, regularStrides, reducingOpDims, reducingStrides);
     case 11:
         return TensorOpWithRegularLoop<ElemType, OPFN, ReductionOp, N, 10>(beta, pointers, alpha, opfn, reductionOp, regularOpDims, regularStrides, reducingOpDims, reducingStrides);
     case 10:
