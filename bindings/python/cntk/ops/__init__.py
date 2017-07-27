@@ -1474,7 +1474,7 @@ def cos(x, name=''):
 @typemap
 def acos(x, name=''):
     '''
-    Computes the element-wise acos of ``x``:
+    Computes the element-wise arccos (inverse cosine) of ``x``:
 
     The output tensor has the same shape as ``x``.
 
@@ -1496,7 +1496,7 @@ def acos(x, name=''):
 @typemap
 def asin(x, name=''):
     '''
-    Computes the element-wise asin of ``x``:
+    Computes the element-wise arcsin (inverse sine) of ``x``:
 
     The output tensor has the same shape as ``x``.
 
