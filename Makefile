@@ -240,10 +240,10 @@ ifeq ("$(BUILDTYPE)","debug")
     GENCODE_FLAGS := $(GENCODE_SM30)
   endif
 
-  CXXFLAGS += -g
+  CXXFLAGS += 
   LDFLAGS += -rdynamic
   COMMON_FLAGS += -D_DEBUG -DNO_SYNC
-  CUFLAGS += -O0 -g -use_fast_math -lineinfo  $(GENCODE_FLAGS)
+  CUFLAGS += -O0 -use_fast_math -lineinfo  $(GENCODE_FLAGS)
 endif
 
 ifeq ("$(BUILDTYPE)","release")
@@ -253,10 +253,10 @@ ifeq ("$(BUILDTYPE)","release")
     GENCODE_FLAGS := $(GENCODE_SM30) $(GENCODE_SM35) $(GENCODE_SM50) $(GENCODE_SM60) $(GENCODE_SM61)
   endif
 
-  CXXFLAGS += -g -O4
+  CXXFLAGS += -O4
   LDFLAGS += -rdynamic
   COMMON_FLAGS += -DNDEBUG -DNO_SYNC
-  CUFLAGS += -O3 -g -use_fast_math $(GENCODE_FLAGS)
+  CUFLAGS += -O3 -use_fast_math $(GENCODE_FLAGS)
 endif
 
 ifdef CNTK_CUDA_DEVICE_DEBUGINFO
